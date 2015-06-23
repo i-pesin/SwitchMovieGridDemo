@@ -13,7 +13,7 @@ static NSArray *imagesURL;
 
 NSString *kNewBatchOfImagesReadyToDownload = @"kNewBatchOfImagesReadyToDownload";
 
-@interface MovieImagesSource()<NSXMLParserDelegate>
+@interface MovieImagesSource()
 @property (nonatomic, strong) NSCache *imagesCache;
 @property (nonatomic, assign) NSUInteger numberOfRequestedImages;
 @property (nonatomic, strong) NSMutableSet *urlsOfDownloadingImages;
@@ -33,6 +33,11 @@ NSString *kNewBatchOfImagesReadyToDownload = @"kNewBatchOfImagesReadyToDownload"
 
 
 + (void)initialize {
+    /*
+     According to the task images have to be loaded in the same order that they appear in the plist file.
+     Plist file consists of dictionary that is deserialized into NSDictionary. NSDictionary is not ordered by definition so it's impossible to get the image URLs in initial order. The only option I've found to
+     achieve it is to parse plist file like XML. That is done in MoviesPlistParser class.
+     */
     imagesURL = [MoviesPlistParser moviesURL];
 }
 
@@ -76,13 +81,21 @@ NSString *kNewBatchOfImagesReadyToDownload = @"kNewBatchOfImagesReadyToDownload"
     
     NSString *imageURLString = imagesURL[index];
     
+    /*
+        check if image was already downloaded and cached
+     */
     if ([self.urlsOfDownloadingImages containsObject:imageURLString]) {
         return;
     }
     
     NSURL *imageURL = [NSURL URLWithString:imageURLString];
+    //specially disable cache for testing
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:imageURL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
     
+    /*
+     in order not to start the same download multiple times
+     need to store URL of the image which download task is currently in progress
+     */
     [self.urlsOfDownloadingImages addObject:imageURLString];
     
     [NSURLConnection sendAsynchronousRequest:urlRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -90,10 +103,16 @@ NSString *kNewBatchOfImagesReadyToDownload = @"kNewBatchOfImagesReadyToDownload"
             UIImage *downloadedImage = [UIImage imageWithData:data];
             
             if (downloadedImage) {
+                /*
+                    cache downloaded image
+                 */
                 [self.imagesCache setObject:downloadedImage forKey:imageURLString];
             }
             
-            if ((self.urlsOfDownloadingImages.count <= self.batchSize - 1) && self.shouldNotifyWhenNewImagesAreReadyToDownload) {
+            /*
+             Check if caller should be notified when ready to download new images and if it's actually possible. Notify if it's true.
+             */
+            if (self.shouldNotifyWhenNewImagesAreReadyToDownload && (self.urlsOfDownloadingImages.count <= self.batchSize - 1)) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:kNewBatchOfImagesReadyToDownload object:nil];
                 self.shouldNotifyWhenNewImagesAreReadyToDownload = NO;
             }

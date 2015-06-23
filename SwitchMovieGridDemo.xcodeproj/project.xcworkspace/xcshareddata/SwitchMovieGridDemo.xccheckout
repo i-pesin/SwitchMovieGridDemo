@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>35239899-9BFF-47C9-AF94-A03433BF92EF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4647C043F062222FFAC23AE2649AC0E55FA5AAA6</key>
+		<string>https://github.com/i-pesin/SwitchMovieGridDemo</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwitchMovieGridDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4647C043F062222FFAC23AE2649AC0E55FA5AAA6</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/i-pesin/SwitchMovieGridDemo</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4647C043F062222FFAC23AE2649AC0E55FA5AAA6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4647C043F062222FFAC23AE2649AC0E55FA5AAA6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwitchMovieGridDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -10,12 +10,4 @@
 
 @implementation EmptyCell
 
-//- (id)initWithFrame:(CGRect)frame {
-//    if (self = [super initWithFrame:frame]) {
-//        self.contentView.backgroundColor = [UIColor blackColor];
-//    }
-//    
-//    return self;
-//}
-
 @end

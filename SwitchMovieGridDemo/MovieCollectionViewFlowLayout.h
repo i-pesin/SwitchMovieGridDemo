@@ -12,4 +12,6 @@ extern NSUInteger const kMoviewItemHeigth;
 
 @interface MovieCollectionViewFlowLayout : UICollectionViewFlowLayout
 
+- (NSUInteger)numberOfImagesPerRow;
+
 @end

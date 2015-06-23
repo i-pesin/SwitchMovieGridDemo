@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A2009491B3611ED00AA8B3A /* nyt_movie_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A2009481B3611ED00AA8B3A /* nyt_movie_data.plist */; };
-		6A20094C1B3612DD00AA8B3A /* MovieImagesSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A20094B1B3612DD00AA8B3A /* MovieImagesSource.m */; };
 		6A2F261E1B35CC0D0095042D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F261D1B35CC0D0095042D /* main.m */; };
 		6A2F26211B35CC0D0095042D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F26201B35CC0D0095042D /* AppDelegate.m */; };
-		6A2F26241B35CC0D0095042D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F26231B35CC0D0095042D /* ViewController.m */; };
+		6A2F26241B35CC0D0095042D /* MovieGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F26231B35CC0D0095042D /* MovieGridViewController.m */; };
 		6A2F26291B35CC0D0095042D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A2F26281B35CC0D0095042D /* Images.xcassets */; };
 		6A2F262C1B35CC0D0095042D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2F262A1B35CC0D0095042D /* LaunchScreen.xib */; };
 		6A2F26381B35CC0D0095042D /* SwitchMovieGridDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F26371B35CC0D0095042D /* SwitchMovieGridDemoTests.m */; };
-		6A2F26431B35D3230095042D /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F26421B35D3230095042D /* MovieCollectionViewCell.m */; };
 		6A2F26461B35FE3E0095042D /* MovieCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F26451B35FE3E0095042D /* MovieCollectionViewFlowLayout.m */; };
+		6A4BAE0B1B3974140061CF28 /* ActivityIndicatorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4BADFF1B3974140061CF28 /* ActivityIndicatorCollectionViewCell.m */; };
+		6A4BAE0C1B3974140061CF28 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4BAE011B3974140061CF28 /* EmptyCell.m */; };
+		6A4BAE0D1B3974140061CF28 /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4BAE031B3974140061CF28 /* MovieCollectionViewCell.m */; };
+		6A4BAE0E1B3974140061CF28 /* MovieImagesSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4BAE061B3974140061CF28 /* MovieImagesSource.m */; };
+		6A4BAE0F1B3974140061CF28 /* MoviesPlistParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4BAE081B3974140061CF28 /* MoviesPlistParser.m */; };
+		6A4BAE101B3974140061CF28 /* nyt_movie_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A4BAE0A1B3974140061CF28 /* nyt_movie_data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,25 +33,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A2009481B3611ED00AA8B3A /* nyt_movie_data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = nyt_movie_data.plist; sourceTree = "<group>"; };
-		6A20094A1B3612DC00AA8B3A /* MovieImagesSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieImagesSource.h; sourceTree = "<group>"; };
-		6A20094B1B3612DD00AA8B3A /* MovieImagesSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieImagesSource.m; sourceTree = "<group>"; };
 		6A2F26181B35CC0D0095042D /* SwitchMovieGridDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitchMovieGridDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2F261C1B35CC0D0095042D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A2F261D1B35CC0D0095042D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A2F261F1B35CC0D0095042D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6A2F26201B35CC0D0095042D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6A2F26221B35CC0D0095042D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6A2F26231B35CC0D0095042D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6A2F26221B35CC0D0095042D /* MovieGridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieGridViewController.h; sourceTree = "<group>"; };
+		6A2F26231B35CC0D0095042D /* MovieGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieGridViewController.m; sourceTree = "<group>"; };
 		6A2F26281B35CC0D0095042D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A2F262B1B35CC0D0095042D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6A2F26311B35CC0D0095042D /* SwitchMovieGridDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwitchMovieGridDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2F26361B35CC0D0095042D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A2F26371B35CC0D0095042D /* SwitchMovieGridDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchMovieGridDemoTests.m; sourceTree = "<group>"; };
-		6A2F26411B35D3230095042D /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
-		6A2F26421B35D3230095042D /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
 		6A2F26441B35FE3E0095042D /* MovieCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		6A2F26451B35FE3E0095042D /* MovieCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		6A4BADFE1B3974140061CF28 /* ActivityIndicatorCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorCollectionViewCell.h; sourceTree = "<group>"; };
+		6A4BADFF1B3974140061CF28 /* ActivityIndicatorCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorCollectionViewCell.m; sourceTree = "<group>"; };
+		6A4BAE001B3974140061CF28 /* EmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyCell.h; sourceTree = "<group>"; };
+		6A4BAE011B3974140061CF28 /* EmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyCell.m; sourceTree = "<group>"; };
+		6A4BAE021B3974140061CF28 /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
+		6A4BAE031B3974140061CF28 /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
+		6A4BAE051B3974140061CF28 /* MovieImagesSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieImagesSource.h; sourceTree = "<group>"; };
+		6A4BAE061B3974140061CF28 /* MovieImagesSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieImagesSource.m; sourceTree = "<group>"; };
+		6A4BAE071B3974140061CF28 /* MoviesPlistParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesPlistParser.h; sourceTree = "<group>"; };
+		6A4BAE081B3974140061CF28 /* MoviesPlistParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesPlistParser.m; sourceTree = "<group>"; };
+		6A4BAE0A1B3974140061CF28 /* nyt_movie_data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = nyt_movie_data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,18 +101,16 @@
 			children = (
 				6A2F261F1B35CC0D0095042D /* AppDelegate.h */,
 				6A2F26201B35CC0D0095042D /* AppDelegate.m */,
-				6A2F26221B35CC0D0095042D /* ViewController.h */,
-				6A2F26231B35CC0D0095042D /* ViewController.m */,
-				6A2F26281B35CC0D0095042D /* Images.xcassets */,
-				6A2009481B3611ED00AA8B3A /* nyt_movie_data.plist */,
-				6A2F262A1B35CC0D0095042D /* LaunchScreen.xib */,
-				6A2F261B1B35CC0D0095042D /* Supporting Files */,
-				6A2F26411B35D3230095042D /* MovieCollectionViewCell.h */,
-				6A2F26421B35D3230095042D /* MovieCollectionViewCell.m */,
+				6A4BADFD1B3974140061CF28 /* CollectionViewCells */,
+				6A4BAE041B3974140061CF28 /* Model */,
+				6A4BAE091B3974140061CF28 /* Resources */,
+				6A2F26221B35CC0D0095042D /* MovieGridViewController.h */,
+				6A2F26231B35CC0D0095042D /* MovieGridViewController.m */,
 				6A2F26441B35FE3E0095042D /* MovieCollectionViewFlowLayout.h */,
 				6A2F26451B35FE3E0095042D /* MovieCollectionViewFlowLayout.m */,
-				6A20094A1B3612DC00AA8B3A /* MovieImagesSource.h */,
-				6A20094B1B3612DD00AA8B3A /* MovieImagesSource.m */,
+				6A2F26281B35CC0D0095042D /* Images.xcassets */,
+				6A2F262A1B35CC0D0095042D /* LaunchScreen.xib */,
+				6A2F261B1B35CC0D0095042D /* Supporting Files */,
 			);
 			path = SwitchMovieGridDemo;
 			sourceTree = "<group>";
@@ -132,6 +139,38 @@
 				6A2F26361B35CC0D0095042D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A4BADFD1B3974140061CF28 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6A4BADFE1B3974140061CF28 /* ActivityIndicatorCollectionViewCell.h */,
+				6A4BADFF1B3974140061CF28 /* ActivityIndicatorCollectionViewCell.m */,
+				6A4BAE001B3974140061CF28 /* EmptyCell.h */,
+				6A4BAE011B3974140061CF28 /* EmptyCell.m */,
+				6A4BAE021B3974140061CF28 /* MovieCollectionViewCell.h */,
+				6A4BAE031B3974140061CF28 /* MovieCollectionViewCell.m */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		6A4BAE041B3974140061CF28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A4BAE051B3974140061CF28 /* MovieImagesSource.h */,
+				6A4BAE061B3974140061CF28 /* MovieImagesSource.m */,
+				6A4BAE071B3974140061CF28 /* MoviesPlistParser.h */,
+				6A4BAE081B3974140061CF28 /* MoviesPlistParser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A4BAE091B3974140061CF28 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6A4BAE0A1B3974140061CF28 /* nyt_movie_data.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +255,7 @@
 			files = (
 				6A2F262C1B35CC0D0095042D /* LaunchScreen.xib in Resources */,
 				6A2F26291B35CC0D0095042D /* Images.xcassets in Resources */,
-				6A2009491B3611ED00AA8B3A /* nyt_movie_data.plist in Resources */,
+				6A4BAE101B3974140061CF28 /* nyt_movie_data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,12 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A2F26241B35CC0D0095042D /* ViewController.m in Sources */,
-				6A20094C1B3612DD00AA8B3A /* MovieImagesSource.m in Sources */,
+				6A2F26241B35CC0D0095042D /* MovieGridViewController.m in Sources */,
 				6A2F26211B35CC0D0095042D /* AppDelegate.m in Sources */,
 				6A2F26461B35FE3E0095042D /* MovieCollectionViewFlowLayout.m in Sources */,
 				6A2F261E1B35CC0D0095042D /* main.m in Sources */,
-				6A2F26431B35D3230095042D /* MovieCollectionViewCell.m in Sources */,
+				6A4BAE0B1B3974140061CF28 /* ActivityIndicatorCollectionViewCell.m in Sources */,
+				6A4BAE0E1B3974140061CF28 /* MovieImagesSource.m in Sources */,
+				6A4BAE0F1B3974140061CF28 /* MoviesPlistParser.m in Sources */,
+				6A4BAE0C1B3974140061CF28 /* EmptyCell.m in Sources */,
+				6A4BAE0D1B3974140061CF28 /* MovieCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwitchMovieGridDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -368,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwitchMovieGridDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "MovieGridViewController.h"
 #import "MovieCollectionViewFlowLayout.h"
 
 @interface AppDelegate ()
@@ -22,7 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    ViewController *vc = [[ViewController alloc] initWithCollectionViewLayout:[MovieCollectionViewFlowLayout new]];
+    MovieGridViewController *vc = [[MovieGridViewController alloc] initWithCollectionViewLayout:[MovieCollectionViewFlowLayout new]];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     
     [self.window makeKeyAndVisible];
